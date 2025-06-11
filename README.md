@@ -105,18 +105,14 @@ Submit issues or PRs 🤝
 Share with friends 🥳
 
 yaml
-Copy
-Edit
+
+> 🔐 You can get a free API key from [Google AI](https://makersuite.google.com/app/apikey)
 
 ---
 
-Would you like me to also generate:
+## 🧠 Gemini-Powered Answers
 
-- `LICENSE` file (MIT)?
-- `.gitignore`?
-- Or publish a GitHub repository template structure for this project?
-
-Let me know, and happy coding, Venky! 🚀
+This app uses **Google's Gemini API** to generate intelligent answers.
 
 
 
@@ -125,3 +121,4 @@ Let me know, and happy coding, Venky! 🚀
 
 
 "# Venky-Q-and-A-app" 
+"# Q-and-A-app-Venky" 

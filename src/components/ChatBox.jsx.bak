@@ -82,28 +82,25 @@ const ChatBox = () => {
 
   const clearHistory = () => { click.play(); setHistory([]); localStorage.removeItem('qa-history'); };
   const stopSpeaking = () => { click.play(); window.speechSynthesis.cancel(); };
- const exportPDF = () => {
-  click.play();
-  const doc = new jsPDF();
-  doc.setFontSize(16);
-  doc.text('✅ Q&A History from venky-AI', 14, 20);
-  const tableData = history.map((item, index) => [index + 1, item.q, item.a]);
-
-  autoTable(doc, {
-    head: [['#', 'Question', 'Answer']],
-    body: tableData,
-    startY: 30,
-    styles: { cellWidth: 'wrap' },
-    columnStyles: {
-      0: { cellWidth: 10 },
-      1: { cellWidth: 70 },
-      2: { cellWidth: 100 }
-    }
-  });
-
-  doc.save('venky_ai_history.pdf');
-};
-
+  const exportPDF = () => {
+    click.play();
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+    doc.text('✅ Q&A History from venky-AI', 14, 20);
+    const tableData = history.map((item, index) => [index + 1, item.q, item.a]);
+    doc.autoTable({
+      head: [['#', 'Question', 'Answer']],
+      body: tableData,
+      startY: 30,
+      styles: { cellWidth: 'wrap' },
+      columnStyles: {
+        0: { cellWidth: 10 },
+        1: { cellWidth: 70 },
+        2: { cellWidth: 100 }
+      }
+    });
+    doc.save('venky_ai_history.pdf');
+  };
 
   return (
     <div className="chatbox" style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover' }}>

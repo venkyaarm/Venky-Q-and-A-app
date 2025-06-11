@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import ChatBox from './components/ChatBox';
 import './index.css';
+import ExportPDF from './components/ExportPDF';
+
+function App() {
+  return (
+    <div>
+      <ExportPDF />
+    </div>
+  );
+}
+
 
 
 function App() {
